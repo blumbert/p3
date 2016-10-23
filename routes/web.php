@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/lipsum', 'LipsumController@index')->name('lipsum.index');
+Route::post('/lipsum', 'LipsumController@show')->name('lipsum.show');
