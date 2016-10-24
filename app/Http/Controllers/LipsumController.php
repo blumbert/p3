@@ -24,8 +24,8 @@ class LipsumController extends Controller
         $paragraphs = $generator->getParagraphs($request->input('paragraphCount'));
 
         // get text as string
-        $text = implode('<p>', $paragraphs);
-        
-        return view('lipsum.show', ['text' => $text]);
+        // $text = implode('<p>', $paragraphs);
+
+        return view('lipsum.show', ['paragraphs' => $paragraphs]);
     }
 }

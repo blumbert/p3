@@ -1,5 +1,7 @@
 @extends('lipsum.index');
 
-@section('content')
-    {{ $text }}
+@section('text')
+    @foreach ($paragraphs as $paragraph)
+        <p>{{ $paragraph }} </p>
+    @endforeach
 @endsection

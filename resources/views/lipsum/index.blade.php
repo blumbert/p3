@@ -3,7 +3,7 @@
 @section('content')
     <form method="post" action="/lipsum">
         {{ csrf_field() }}
-        Number of paragraphs: <input type="text" maxlength="2" name="paragraphCount">
+        Number of paragraphs: <input type="text" maxlength="1" name="paragraphCount">
         <input type="submit" value="Generate">
     </form>
 
@@ -14,4 +14,7 @@
         @endforeach
     </ul>
     @endif
+
+    @yield('text')
+    
 @endsection
