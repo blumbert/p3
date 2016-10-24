@@ -9,7 +9,7 @@ use P3\Http\Requests;
 class UsersController extends Controller
 {
     function index() {
-        //
+        return view('users.index');
     }
 
     function show() {
