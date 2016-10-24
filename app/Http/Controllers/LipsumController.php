@@ -13,9 +13,19 @@ class LipsumController extends Controller
     }
 
     function show(Request $request) {
+
+        //validate input
+        $this->validate($request, ['paragraphCount' => 'required|numeric']);
+
+        // create new generator instance
         $generator = new \Badcow\LoremIpsum\Generator();
+
+        // generate given number of paragraphs
         $paragraphs = $generator->getParagraphs($request->input('paragraphCount'));
+
+        // get text as string
         $text = implode('<p>', $paragraphs);
+        
         return view('lipsum.show', ['text' => $text]);
     }
 }
