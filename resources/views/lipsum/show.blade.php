@@ -1,4 +1,4 @@
-@extends('lipsum.index');
+@extends('lipsum.index')
 
 @section('text')
     @foreach ($paragraphs as $paragraph)
