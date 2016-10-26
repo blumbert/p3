@@ -13,7 +13,7 @@
             </ul>
         @endif
 
-        Birthday? <input type="checkbox" name="birthday" value="Y"><br>
+        Birthday? <input type="checkbox" name="birthdate" value="Y"><br>
         Profile? <input type="checkbox" name="profile" value="Y"><br>
         <input type="submit" value="Generate Users">
     </form>
