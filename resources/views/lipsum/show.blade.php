@@ -1,6 +1,8 @@
 @extends('lipsum.index')
 
-@section('text')
+@section('content')
+    @parent
+    
     @foreach ($paragraphs as $paragraph)
         <p>{{ $paragraph }} </p>
     @endforeach

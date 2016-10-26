@@ -15,6 +15,4 @@
     </ul>
     @endif
 
-    @yield('text')
-    
 @endsection
