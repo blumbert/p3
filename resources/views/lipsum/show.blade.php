@@ -2,8 +2,9 @@
 
 @section('content')
     @parent
-    
+
     @foreach ($paragraphs as $paragraph)
-        <p>{{ $paragraph }} </p>
+        <p>{{ $paragraph }}</p>
     @endforeach
+    
 @endsection
