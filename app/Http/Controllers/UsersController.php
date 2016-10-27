@@ -25,7 +25,7 @@ class UsersController extends Controller
 
             // add birthdate and profile if requested
             if ($request->input('birthdate') == 'Y')
-                $users[$i]['birthdate'] = $faker->date('m/d/Y', '126144000');
+                $users[$i]['birthdate'] = $faker->date('m/d/Y');
             if ($request->input('profile') == 'Y')
                 $users[$i]['profile'] = $faker->paragraph();
         }
