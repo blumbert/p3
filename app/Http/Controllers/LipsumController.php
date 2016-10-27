@@ -9,7 +9,7 @@ use P3\Http\Requests;
 class LipsumController extends Controller
 {
     function index() {
-        return view('lipsum.index', ['title' => 'Lorem Ipsum Generator']);
+        return view('lipsum.index', ['title' => "Lorem Ipsum Generator"]);
     }
 
     function show(Request $request) {
@@ -24,7 +24,7 @@ class LipsumController extends Controller
         $paragraphs = $generator->getParagraphs($request->input('paragraphCount'));
 
         return view('lipsum.show',
-            ['title' => 'Lorem Ipsum Generator',
+            ['title' => "Lorem Ipsum Generator",
              'paragraphs' => $paragraphs]);
     }
 }

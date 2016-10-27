@@ -9,7 +9,7 @@ use P3\Http\Requests;
 class UsersController extends Controller
 {
     function index() {
-        return view('users.index', ['title' => 'Users Generator']);
+        return view('users.index', ['title' => 'User Generator']);
     }
 
     function show(Request $request) {
@@ -33,6 +33,6 @@ class UsersController extends Controller
         // show users view
         return view('users.show',
             ['users' => $users,
-             'title' => 'Users Generator']);
+             'title' => 'User Generator']);
     }
 }

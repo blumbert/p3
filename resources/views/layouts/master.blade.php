@@ -24,7 +24,7 @@
                     Lorem Ipsum Generator</a>
                 </li>
                 <li>
-                    <a class="btn @if ($title == 'Users Generator') btn-primary @else btn-default @endif"
+                    <a class="btn @if ($title == 'User Generator') btn-primary @else btn-default @endif"
                         href="/users">
                     Users Generator</a>
                 </li>

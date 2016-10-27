@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+    {{ $title }}
+@endsection
+
 @section('content')
     <form method="post" action="/lipsum">
         {{ csrf_field() }}
