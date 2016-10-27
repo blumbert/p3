@@ -19,19 +19,15 @@
         <nav>
             <ul class="list-inline">
                 <li>
-                    @if ($title == "Lorem Ipsum Generator")
-                        <a class="btn btn-primary" href='/lipsum'>
-                    @else
-                        <a class="btn btn-default" href='/lipsum'>
-                    @endif
-                    Lorem Ipsum Generator</a></li>
+                    <a class="btn @if ($title == 'Lorem Ipsum Generator') btn-primary @else btn-default @endif"
+                        href="/lipsum">
+                    Lorem Ipsum Generator</a>
+                </li>
                 <li>
-                    @if ($title == "Users Generator")
-                        <a class="btn btn-primary" href="/users">
-                    @else
-                        <a class="btn btn-default" href='/users'>
-                    @endif
-                    Users Generator</a></li>
+                    <a class="btn @if ($title == 'Users Generator') btn-primary @else btn-default @endif"
+                        href="/users">
+                    Users Generator</a>
+                </li>
             </ul>
         </nav>
 
