@@ -17,9 +17,9 @@ class UsersController extends Controller
         $this->validate($request, ['userCount' => 'required|numeric|max:99']);
 
         //generate number of users
+        $faker = \Faker\Factory::create();
+        
         for ($i = 0; $i < $request->input('userCount'); $i++) {
-            $faker = \Faker\Factory::create();
-
             // generate user name and add to
             $users[$i]['name'] = $faker->name;
 
