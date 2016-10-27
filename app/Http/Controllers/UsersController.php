@@ -9,12 +9,12 @@ use P3\Http\Requests;
 class UsersController extends Controller
 {
     function index() {
-        return view('users.index');
+        return view('users.index', ['title' => 'Users Generator']);
     }
 
     function show(Request $request) {
         // validate input
-        $this->validate($request, ['userCount' => 'required|numeric']);
+        $this->validate($request, ['userCount' => 'required|numeric|max:99']);
 
         //generate number of users
         for ($i = 0; $i < $request->input('userCount'); $i++) {
@@ -31,6 +31,8 @@ class UsersController extends Controller
         }
 
         // show users view
-        return view('users.show', ['users' => $users]);
+        return view('users.show',
+            ['users' => $users,
+             'title' => 'Users Generator']);
     }
 }

@@ -1,0 +1,28 @@
+.user {
+    margin: 10px 0px;
+}
+
+input[type="text"] {
+    width: 2em;
+}
+
+form {
+    margin: 20px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    color: red;
+}
+
+#heading_text {
+    text-decoration: none;
+    color: black;
+}
+
+#heading_text.hover {
+    cursor: pointer;
+}

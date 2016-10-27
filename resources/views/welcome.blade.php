@@ -1,5 +1,5 @@
 @extends('layouts.master')
 
 @section('content')
-    p3 home
+    Choose from the menu above to start generating useful stuff.
 @endsection

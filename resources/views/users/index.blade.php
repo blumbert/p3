@@ -3,7 +3,7 @@
 @section('content')
     <form method="post" action="/users">
         {{ csrf_field() }}
-        How many users? <input type="text" maxlength="1" name="userCount"><br>
+        How many users? (max: 99) <input type="text" maxlength="2" name="userCount" value="{{ old('userCount') }}"><br>
 
         @if ($errors->has('userCount'))
             <ul>
@@ -14,7 +14,7 @@
         @endif
 
         Birthday? <input type="checkbox" name="birthdate" value="Y"><br>
-        Profile? <input type="checkbox" name="profile" value="Y"><br>
+        Profile? <input type="checkbox" name="profile" value="Y"><br><br>
         <input type="submit" value="Generate Users">
     </form>
 

@@ -4,12 +4,14 @@
     @parent
 
     @foreach ($users as $user)
-        <p>{{ $user['name'] }}</p>
-        @if (isset($user['birthdate']))
-            <p>{{ $user['birthdate'] }}</p>
-        @endif
-        @if (isset($user['profile']))
-            <p>{{ $user['profile'] }}</p>
-        @endif
+        <div class="user">
+            <div><strong>{{ $user['name'] }}</strong></div>
+            @if (isset($user['birthdate']))
+                <div>{{ $user['birthdate'] }}</div>
+            @endif
+            @if (isset($user['profile']))
+                <div>{{ $user['profile'] }}</div>
+            @endif
+        </div>
     @endforeach
 @endsection

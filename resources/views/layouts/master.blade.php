@@ -7,35 +7,39 @@
     </title>
 
     <meta charset='utf-8'>
-    <link href="/css/p3.css" type='text/css' rel='stylesheet'>
+    <link href="/css/styles.css" type='text/css' rel='stylesheet'>
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
-    @yield('head')
-
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1><a href="/" id="heading_text">Developer's Best Friend</a></h1>
+        </header>
 
-    <header>
-    </header>
+        <nav>
+            <ul class="list-inline">
+                <li>
+                    @if ($title == "Lorem Ipsum Generator")
+                        <a class="btn btn-primary" href='/lipsum'>
+                    @else
+                        <a class="btn btn-default" href='/lipsum'>
+                    @endif
+                    Lorem Ipsum Generator</a></li>
+                <li>
+                    @if ($title == "Users Generator")
+                        <a class="btn btn-primary" href="/users">
+                    @else
+                        <a class="btn btn-default" href='/users'>
+                    @endif
+                    Users Generator</a></li>
+            </ul>
+        </nav>
 
-    <nav>
-        <ul>
-            <li><a href='/lipsum'>Lorem Ipsum Generator</a></li>
-            <li><a href='/users'>Users Generator</a></li>
-        </ul>
-    </nav>
-
-    <section>
-        {{-- Main page content will be yielded here --}}
-        @yield('content')
-    </section>
-
-    <footer>
-        &copy; {{ date('Y') }}
-    </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-    @yield('body')
+        <section>
+            {{-- Main page content will be yielded here --}}
+            @yield('content')
+        </section>
+    </div>
 
 </body>
 </html>
